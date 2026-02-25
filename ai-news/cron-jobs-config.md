@@ -1,7 +1,7 @@
 # AI 定时任务配置
 
 > 生成日期：2026-02-25  
-> 版本：v2.0
+> 版本：v3.0
 
 ---
 
@@ -10,7 +10,7 @@
 | 时间 | 任务名称 | 输出文件 | 内容范围 |
 |------|----------|----------|----------|
 | 09:00 | 每日AI大模型热点新闻 | `YYYY-MM-DD-llm-news.md` | 大模型技术动态 |
-| 10:00 | 每日AI圈热门内容 | `YYYY-MM-DD-community.md` | 社区讨论+Agent生态 |
+| 10:00 | 每日AI应用与Agent热点 | `YYYY-MM-DD-agent-news.md` | AI应用与Agent生态 |
 
 ---
 
@@ -60,23 +60,35 @@
 
 ---
 
-## 任务 2：每日AI圈热门内容
+## 任务 2：每日AI应用与Agent热点
 
 **执行时间**：每天 10:00 (Asia/Shanghai)  
 **任务ID**: `87a4d701-8326-4e83-b109-2ae805213a35`  
-**输出文件**: `ai-news/YYYY-MM-DD-community.md`
+**输出文件**: `ai-news/YYYY-MM-DD-agent-news.md`
 
-### 重点关注平台
-1. X(Twitter)上的AI讨论热点
-2. Reddit的AI相关热门帖子
-3. B站AI相关热门视频/内容
-4. 小红书AI相关热门笔记
-5. **OpenClaw / AI Agent生态**：MCP协议动态、OpenClaw更新、Claude Code/Aider等开源Agent工具进展
+### 重点关注领域
+- AI编程助手与开发工具（Claude Code、Cursor、Windsurf、GitHub Copilot、Aider等）
+- AI Agent框架与平台（OpenClaw、AutoGen、CrewAI、LangChain、Dify等）
+- MCP协议生态与集成案例
+- AI自动化工作流与生产力工具
+- AI在特定领域的应用落地（设计、写作、研究、数据分析等）
+- Agent安全与最佳实践
+- 开源AI工具与项目更新
+
+### 热点站点来源（优先搜索）
+
+| 类型 | 来源 |
+|------|------|
+| **官方渠道** | OpenClaw Blog、Anthropic News、GitHub Blog、OpenAI Developer Blog |
+| **技术社区** | GitHub Trending、Hacker News、Reddit r/OpenClaw、Reddit r/LocalLLaMA、Discord AI社区 |
+| **开发者平台** | X(Twitter) Tech、Dev.to、Medium AI专栏 |
+| **中文来源** | 机器之心AI应用、量子位、InfoQ AI、掘金AI专栏、知乎AI话题 |
+| **视频平台** | B站AI教程、YouTube AI频道 |
 
 ### 输出格式
 
 ```markdown
-# AI 圈热门内容 - YYYY-MM-DD
+# AI 应用与Agent热点 - YYYY-MM-DD
 
 ## 1. 内容标题
 **来源**: [平台名称](链接)
@@ -85,7 +97,7 @@
 简要内容...
 
 **AI解读**:
-为什么值得关注，有什么实用价值...
+实用价值、最佳实践、为什么值得关注...
 
 ---
 
@@ -115,6 +127,7 @@ git push
 |------|------|----------|
 | 2026-02-25 | v1.0 | 初始创建两个定时任务 |
 | 2026-02-25 | v2.0 | 扩充9:00任务，专注AI大模型，增加热点站点来源 |
+| 2026-02-25 | v3.0 | 扩充10:00任务，聚焦AI应用与Agent生态 |
 
 ---
 
